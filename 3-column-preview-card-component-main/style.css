@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{    
+--Brightorange: hsl(31, 77%, 52%);
+--Darkcyan: hsl(184, 100%, 22%);
+--Verydarkcyan: hsl(179, 100%, 13%);
+--Transparentwhite: hsla(0, 0%, 100%, 0.75);
+--Verylightgray: hsl(0, 0%, 95%);
+}
+body{
+    height: 90vh;
+    flex-direction: column;
+}
+.set,body,.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+    flex-direction: row;
+    color: var(--Verylightgray);
+}
+.set{
+    width:200px;
+padding:40px;
+}
+.set1{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.set3{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+h1{
+    font-family: Big Shoulders Display;
+    font-weight: 700;
+    margin: 15px auto;
+    font-size: 24px;
+}
+p{
+    font-family: Lexend Deca;
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--Transparentwhite);
+}
+button{
+    border-radius: 30px;
+    width: 110px;
+    height: 35px;
+    margin: 50px auto 20px auto;
+    border: none;
+}
+img{
+    width: 50px;
+    margin: 15px auto;
+}
+.set1  button:hover{
+    background-color: var(--Brightorange);
+}
+.set2  button:hover{
+    background-color: var(--Darkcyan);
+}
+.set3  button:hover{
+    background-color: var(--Verydarkcyan);
+}
+.set button:hover{
+    cursor: pointer;
+    color: var(--Transparentwhite);
+    border:2px solid white;
+}
+.set > .suv,.set2{
+    background-color: var(--Darkcyan);
+}
+.suv>button{
+    color: var(--Darkcyan);
+}
+.sed,.set1{
+    background-color: var(--Brightorange);
+}
+.sed > button{
+    color: var(--Brightorange);
+}
+.lux,.set3{
+    background-color: var(--Verydarkcyan);
+}
+.lux > button{
+    color: var(--Verydarkcyan);
+}
