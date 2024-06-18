@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+--PaleBlue: hsl(243, 100%, 93%);
+--GrayishBlue: hsl(229, 7%, 55%);
+--DarkBlue: hsl(228, 56%, 26%);
+--VeryDarkBlue: hsl(229, 57%, 11%);
+}
+body{
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    justify-content:flex-end;
+    height: 100vh;
+    flex-direction:column;
+}
+.note,.app,.toend{
+    display: flex;
+align-items:center;
+}
+.cont{
+    background-image: url('./images/bg-desktop.png');
+    background-size: 100%;
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.app,.det{
+    background-color: var(--DarkBlue);
+    z-index: 3;
+    position: relative;
+    top:-50px;
+    border-radius: 7px;
+}
+.app{
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 170px;
+    top:-50px;
+    margin-right: 30px;
+    border-top-right-radius: 50%;
+    left: 50px;
+    height: 120px;
+}
+.det{
+    font-family: Raleway;
+    color:var(--GrayishBlue);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 90px;
+    top: -20px;
+}
+ #f{
+width: 80px;
+align-self: flex-start;
+padding-left: 10px
+}
+
+.ap img{
+    border-radius: 5px;
+    border: 10px solid var(--VeryDarkBlue);
+    color: var(--VeryDarkBlue);
+    background-color: var(--VeryDarkBlue);
+}
+#file{
+    width: 32px;
+    height: 35px;
+}
+#folder{
+    width: 35px;
+    height: 35px;
+    border-top-width:13px;
+}
+#upload{
+    border-top-width: 17px;
+    width: 35px;
+    height: 35px;
+}
+.ap{
+    align-self: flex-start;
+    padding-left: 10px;
+}
+.b{
+    color: var(--VeryDarkBlue);
+}
+.y{
+    color:var(--PaleBlue);
+}
+
+.par{
+    align-self: start;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 12px;
+}
+.b,.y{
+    font-weight: 700;
+}
+.note,.y{
+    font-size: 10px;
+}
+.note{
+    justify-content: center;
+    background-color: var(--PaleBlue);
+    position:absolute;
+    top: -35px;
+    left:175px;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    width: 100px;
+    height: 50px;
+}
+.note::after{
+    position: absolute;
+    content: "";
+    border-top:15px solid var(--PaleBlue);
+    border-left: 15px solid transparent;
+    top:50px;
+    left:86px;
+}
+.b{
+    font-size: 25px;
+    position: relative;
+}
+.toend{
+    justify-content: space-between;
+    width: 250px;
+    top: -12px;
+    position: relative;
+}
+.load{
+    width: 250px;
+    height: 17px;
+    background-color:var(--VeryDarkBlue);
+    border-radius: 30px;
+    position: relative;
+    top:-13px;
+}
+.load::after,.load::before{
+    position: absolute;
+    content: "";
+}
+.load::before{
+    width: 180px;
+    height: 15px;
+    background: linear-gradient( hsl(6, 100%, 80%) ,hsl(335, 100%, 65%));
+    left: 2px;
+    top:.5px;
+    border-radius: 30px;
+}
+.load::after{
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--PaleBlue);
+    left:170px;
+    top:2px
+}
+@media only screen and (max-width: 375px) {
+  .cont{
+    background-image: url('./images/bg-mobile.png');
+    background-size: 100%;
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+  }  
+  .app{
+    width:85%;
+    left:15px;
+    height: 28%;
+    border-top-right-radius: 45%;
+  }
+  .det{
+    width: 85%;
+    height: 22%;
+    margin-top: -7px;
+  }
+  #f{
+    width: 140px;
+    position: inherit;
+    left: 25px;
+  }
+  .y
+  .ap{
+    position: inherit;
+    left:20px;
+    top:-10px
+  }
+  .ap img{
+    margin: auto 7px ;
+  }
+  #file{
+    width: 42px;
+    height: 45px;
+  }
+  #folder,#upload{
+    width: 45px;
+    height: 45px;
+  }
+  .toend{
+    top:-20px;
+  }
+  .par{
+    margin-left: 30px;
+    font-size: 14px;
+}
+.y{
+    font-size: 15px;
+}
+  .note{
+    top: 130px;
+    left:73px;
+    width: 50%;
+    height: 45%;
+    border-radius: 15px;
+  }
+  .note::after{
+    display: none;
+  }
+}
